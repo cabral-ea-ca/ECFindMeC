@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ZS-xo-vY2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZIA-73-y1o"/>
+                        <viewControllerLayoutGuide type="bottom" id="j68-kI-uHs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9x-vo-1XY">
+                                <rect key="frame" x="4" y="68" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dev Orient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXQ-nx-7SJ">
+                                <rect key="frame" x="70" y="68" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Position, Speed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1j-K2-4UP">
+                                <rect key="frame" x="251" y="68" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Phr-47-qI4">
+                                <rect key="frame" x="4" y="93" width="367" height="570"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="v9x-vo-1XY" firstAttribute="top" secondItem="ZIA-73-y1o" secondAttribute="bottom" constant="4" id="4fQ-qK-bD3"/>
+                            <constraint firstItem="v9x-vo-1XY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="4" id="7ge-Oz-y4M"/>
+                            <constraint firstItem="hXQ-nx-7SJ" firstAttribute="leading" secondItem="v9x-vo-1XY" secondAttribute="trailing" constant="16" id="G0c-Wu-gZZ"/>
+                            <constraint firstItem="hXQ-nx-7SJ" firstAttribute="top" secondItem="v9x-vo-1XY" secondAttribute="top" id="GlH-Cf-POj"/>
+                            <constraint firstAttribute="trailing" secondItem="Phr-47-qI4" secondAttribute="trailing" constant="4" id="P2Z-d2-beP"/>
+                            <constraint firstAttribute="trailing" secondItem="a1j-K2-4UP" secondAttribute="trailing" constant="4" id="bu8-m9-F6p"/>
+                            <constraint firstItem="Phr-47-qI4" firstAttribute="top" secondItem="v9x-vo-1XY" secondAttribute="bottom" constant="4" id="cZa-3a-78f"/>
+                            <constraint firstItem="Phr-47-qI4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="4" id="gmm-Zz-RtF"/>
+                            <constraint firstItem="a1j-K2-4UP" firstAttribute="top" secondItem="v9x-vo-1XY" secondAttribute="top" id="kZf-IR-FDd"/>
+                            <constraint firstItem="j68-kI-uHs" firstAttribute="top" secondItem="Phr-47-qI4" secondAttribute="bottom" constant="4" id="yQP-hu-nZp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gxe-cr-XEO">
+                        <leftBarButtonItems>
+                            <barButtonItem title="  ▲   " id="u5E-LL-W2z">
+                                <connections>
+                                    <action selector="buttonOrientHeading:" destination="BYZ-38-t0r" id="vtP-cu-6zH"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Lock Orientation" id="L2g-mw-pIg">
+                                <connections>
+                                    <action selector="buttonLockUsage:" destination="BYZ-38-t0r" id="ksG-mE-uBm"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Logs" id="lYU-mW-i30">
+                                <connections>
+                                    <action selector="buttonLogs:" destination="BYZ-38-t0r" id="yVU-AH-nKZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Usage" id="wVy-Nf-KEq">
+                                <connections>
+                                    <action selector="buttonNaviUsage:" destination="BYZ-38-t0r" id="pEu-JT-fFb"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorizationLabel" destination="v9x-vo-1XY" id="OqD-zd-yAR"/>
+                        <outlet property="btnLockOrientation" destination="L2g-mw-pIg" id="dhg-wY-1oA"/>
+                        <outlet property="btnNaviUsage" destination="wVy-Nf-KEq" id="NSV-HT-K3T"/>
+                        <outlet property="headingOrientation" destination="hXQ-nx-7SJ" id="lZU-nK-GqD"/>
+                        <outlet property="locationLabel" destination="a1j-K2-4UP" id="6Cc-cg-WcT"/>
+                        <outlet property="mapView" destination="Phr-47-qI4" id="sZ9-YC-KWG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640.79999999999995" y="-601.34932533733138"/>
+        </scene>
+        <!--Cust Navigation Controller-->
+        <scene sceneID="BhY-Ih-RF6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ZS-xo-vY2" customClass="CustNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiq-sh-gjb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="64e-xN-7i1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YcF-1n-SdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-159.19999999999999" y="-601.34932533733138"/>
+        </scene>
+    </scenes>
+</document>
